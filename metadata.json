@@ -1,0 +1,5 @@
+{
+  "name": "Text-to-Speech only Temperature V.4",
+  "description": "An AI-powered app that converts text-based story scripts into natural-sounding audio. Input dialogue, assign voices with temperature control to ensure perfect consistency.",
+  "requestFramePermissions": []
+}
