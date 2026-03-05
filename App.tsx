@@ -11,7 +11,7 @@ import type { DialogueLine, SpeakerConfig, Voice, TextModel } from './types';
 import { AVAILABLE_VOICES, EXAMPLE_SCRIPT, TEXT_MODELS, TTS_MODELS, DEFAULT_TONE } from './constants';
 import { CopyIcon, LoadingSpinner } from './components/icons';
 
-const APP_VERSION = "v1.9.49 (thunyaluks)";
+const APP_VERSION = "v1.9.49 (captainsmallvet)";
 
 const App: React.FC = () => {
   const [inputKey, setInputKey] = useState<string>('');
@@ -62,7 +62,7 @@ const App: React.FC = () => {
   // Changed default to TTS_MODELS[1] which corresponds to 'gemini-2.5-pro-preview-tts'
   const [ttsModelId, setTtsModelId] = useState<string>(TTS_MODELS[1].id);
 
-  const [maxCharsPerBatch, setMaxCharsPerBatch] = useState<number>(1900);
+  const [maxCharsPerBatch, setMaxCharsPerBatch] = useState<number>(3000);
   const [interBatchDelay, setInterBatchDelay] = useState<number>(120);
 
   const allVoices = useMemo(() => [...AVAILABLE_VOICES, ...customVoices], [customVoices]);
@@ -105,7 +105,7 @@ const App: React.FC = () => {
     if (savedTextModelId) setTextModelId(savedTextModelId);
     if (savedTtsModelId) setTtsModelId(savedTtsModelId);
 
-    if (savedMaxChars) setMaxCharsPerBatch(parseInt(savedMaxChars) || 1900);
+    if (savedMaxChars) setMaxCharsPerBatch(parseInt(savedMaxChars) || 3000);
     if (savedDelay) setInterBatchDelay(parseInt(savedDelay) || 120);
 
     if (savedCustomVoices) {
@@ -133,7 +133,7 @@ const App: React.FC = () => {
               voice: config.voice || AVAILABLE_VOICES[0].id,
               volume: config.volume || 1,
               toneDescription: config.toneDescription || '',
-              temperature: config.temperature !== undefined ? config.temperature : 0.75
+              temperature: config.temperature !== undefined ? config.temperature : 0.8
             }];
           }));
           setSpeakerConfigs(migratedConfigs);
@@ -172,7 +172,7 @@ const App: React.FC = () => {
             voice: defaultVoice.id,
             volume: 1, 
             toneDescription: 'comfortable:',
-            temperature: 0.75
+            temperature: 0.8
           });
         }
         voiceIndex++;

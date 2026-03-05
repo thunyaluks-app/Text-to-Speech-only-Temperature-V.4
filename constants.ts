@@ -42,10 +42,15 @@ export const AVAILABLE_VOICES: Voice[] = [
 export const DEFAULT_TONE = "comfortable:";
 
 export const TEXT_MODELS: TextModel[] = [
-  { id: 'gemini-3-flash-preview', name: 'Gemini 3 Flash (Fast)', description: 'Best for simple logic and quick tasks' },
-  { id: 'gemini-3-pro-preview', name: 'Gemini 3 Pro (Smart)', description: 'Best for complex reasoning and creative writing' },
-  { id: 'gemini-flash-latest', name: 'Gemini Flash Latest', description: 'Up-to-date version of the Flash model' },
-  { id: 'gemini-flash-lite-latest', name: 'Gemini Flash Lite', description: 'Lightweight and extremely fast' },
+    { id: 'gemini-3-flash-preview', name: 'Gemini 3 Flash Preview', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-3.1-pro-preview', name: 'Gemini 3.1 Pro Preview', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-3-pro-preview', name: 'Gemini 3.0 Pro Preview', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-3.1-flash-lite-preview', name: 'Gemini 3.1 Flash Lite Preview', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-flash-latest', name: 'Gemini Flash Latest', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-flash-lite-latest', name: 'Gemini Flash Lite Latest', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro', description: 'Best for simple logic and quick tasks' },
+    { id: 'gemini-pro-latest', name: 'Gemini Pro (Latest Stable)', description: 'Best for simple logic and quick tasks' },
 ];
 
 export const TTS_MODELS: TextModel[] = [
